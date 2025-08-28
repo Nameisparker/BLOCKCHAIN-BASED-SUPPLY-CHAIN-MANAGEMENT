@@ -1,0 +1,116 @@
+/* Color palette based on ntp logo */
+:root {
+  --primary-blue: #2196F3;
+  --secondary-blue: #1565C0;
+  --accent-blue: #64B5F6;
+  --background-light: #F8FAFC;
+  --text-dark: #1A237E;
+  --text-light: #ffffff;
+}
+
+body, .main-body {
+  background: var(--background-light) !important;
+  color: var(--text-dark);
+}
+
+.app, .new-user-paper, .not-found, .MuiPaper-root {
+  background: var(--background-light) !important;
+  color: var(--text-dark);
+}
+
+/* Header/AppBar */
+#app-bar, .MuiAppBar-colorSecondary {
+  background: var(--primary-blue) !important;
+  color: var(--text-light) !important;
+  box-shadow: 0 2px 12px rgba(33,150,243,0.08);
+}
+
+/* Tabs */
+.MuiTabs-root {
+  background: var(--primary-blue) !important;
+}
+.MuiTab-root {
+  color: var(--accent-blue) !important;
+  font-weight: 500;
+}
+.Mui-selected {
+  color: var(--text-light) !important;
+}
+.MuiTabs-indicator {
+  background: var(--accent-blue) !important;
+}
+
+/* Buttons */
+.nf-button, .MuiButton-containedPrimary, .MuiButton-containedSecondary {
+  background: var(--primary-blue) !important;
+  color: var(--text-light) !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.nf-button:hover, .MuiButton-containedPrimary:hover, .MuiButton-containedSecondary:hover {
+  background: var(--secondary-blue) !important;
+  box-shadow: 0 4px 16px rgba(21,101,192,0.14);
+}
+
+/* Table header */
+.MuiTableHead-root {
+  background: var(--accent-blue) !important;
+}
+.MuiTableCell-head {
+  color: var(--text-light) !important;
+  font-weight: 600;
+}
+
+/* Toast/snackbar */
+.MuiSnackbarContent-root {
+  background: var(--primary-blue) !important;
+  color: var(--text-light) !important;
+  border-radius: 8px;
+}
+
+/* Loader overlay enhancements (already present) */
+.backdrop-design {
+  background: rgba(245, 247, 250, 0.85) !important;
+  backdrop-filter: blur(3px);
+}
+
+/* Typography for loader */
+#app-logo + br + br + .MuiTypography-root {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
+  color: var(--primary-blue);
+  letter-spacing: 0.01em;
+}
+
+/* Animated logo styles (already present) */
+.animated-logo {
+  height: 44px;
+  width: 44px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1), box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
+  background: #f8fafc;
+  object-fit: cover;
+}
+.animated-logo:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.12);
+  filter: brightness(1.08);
+}
+
+.animated-logo-loader {
+  height: 64px;
+  width: 64px;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.10);
+  background: #f8fafc;
+  object-fit: cover;
+  animation: logoPulse 1.2s infinite cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes logoPulse {
+  0% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.10); filter: brightness(1.12); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
